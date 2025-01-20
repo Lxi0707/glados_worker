@@ -1,0 +1,2 @@
+# glados_worker
+建立在worker的glados自动签到，成功将发送通知到Telegram
