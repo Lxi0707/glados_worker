@@ -1,9 +1,10 @@
-# glados_worker_sign in
+# 📄 glados_worker_sign in
 建立在 Cloudflare worker 的 glados 自动签到，成功将发送通知到 Telegram
 
-注册地址[](https://glados.rocks)
+[glados 注册地址](https://glados.rocks)
 
-# 基于 仓库[](https://github.com/hailang3014/glados-auto) 进行的修改，原仓库通知使用 pushplus 通知
+# 基于 [仓库](https://github.com/hailang3014/glados-auto) 进行的修改，原仓库通知使用 pushplus 通知
+
 删除了原先的 sendNotification ，新增 sendTelegramNotification 
 更新 handleCheckin
 
@@ -14,10 +15,10 @@
 ## 部署步骤
 
 ### 1. 登录 Cloudflare Dashboardrd
-注册登录 Cloudflare Dashboardrd[](https://dash.cloudflare.com/)
+注册登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
 配置 Cloudflare Workers
 创建一个新的 Worker
-将本项目worker.js 文件内容复制到 Worker 脚本编辑器中
+将本项目 worker.js 文件内容复制到 Worker 脚本编辑器中
 
 ### 2. 创建 KV 命名空间 并进行绑定
 ```
