@@ -1,8 +1,18 @@
 # 📄 glados_worker_sign_in
 建立在 Cloudflare worker 的 glados 自动签到，成功将发送通知到 Telegram
 
-[glados 注册地址](https://glados.rocks)
+[glados 注册地址](https://glados.rocks) 
 
+2025.4.10更新，解决传输bot 未知账号: 失败 - statusData.data.leftDays.split is not a function
+
+更换tg变量名,原变量已更换：
+
+```
+TELEGRAM_BOT_TOKEN
+
+TELEGRAM_CHAT_ID
+```
+👇👇👇
 # 基于 [仓库](https://github.com/hailang3014/glados-auto) 进行的修改，原仓库通知使用 pushplus 通知
 
 删除了原先的 sendNotification ，新增 sendTelegramNotification 
@@ -28,10 +38,13 @@
 
 ### 3. 配置环境变量
 在 Worker 的 Settings -> Variables 中添加以下环境变量：
+
 ```
 GLADOS_COOKIE=你的GLaDOS Cookie
-TELEGRAM_TOKEN=你的Telegram Bot Token
-TELEGRAM_USERID=你的Telegram 用户ID
+
+TELEGRAM_BOT_TOKEN=你的Telegram Bot Token
+
+TELEGRAM_CHAT_ID=你的Telegram 用户ID
 ```
 
 注意：
