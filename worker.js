@@ -70,7 +70,17 @@ const HTML_TEMPLATE = `<!DOCTYPE html>
             }
           });
           
-          const response = await fetch("/checkin", { method: "POST" });
+          const response = await fetch("/checkin", { 
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+          
+          if (!response.ok) {
+            throw new Error('网络响应不正常');
+          }
+          
           const data = await response.json();
           
           if (data.success) {
@@ -258,7 +268,12 @@ async function handleCheckin(env) {
     success: results.some(function(r) { return r.success; }),
     results: results
   }), {
-    headers: { "Content-Type": "application/json" }
+    headers: { 
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    }
   });
 }
 
@@ -277,8 +292,18 @@ export default {
   async fetch(request, env) {
     try {
       const url = new URL(request.url);
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
+          }
+        });
+      }
       if (request.method === "POST" && url.pathname === "/checkin") {
-        return await handleCheckin(env);
+        const response = await handleCheckin(env);
+        return response;
       }
       return await handleRequest(env);
     } catch (error) {
