@@ -25,7 +25,7 @@ TELEGRAM_CHAT_ID
 全自动签到，无需服务器，Web 页面，多账号签到任务，签到结果通过 Telegram 推送，每日自动签到，确保不断签，支持手动签到任务
 
 
-## 部署步骤
+## 📢📢部署步骤
 
 ### 1. 登录 Cloudflare Dashboardrd
 注册登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
