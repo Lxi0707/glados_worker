@@ -3,7 +3,15 @@
 
 [glados 注册地址](https://glados.rocks) 
 
-2025.4.10更新，解决传输bot 未知账号: 失败 - statusData.data.leftDays.split is not a function
+
+👇👇👇
+# 基于 [仓库](https://github.com/hailang3014/glados-auto) 进行的修改，原仓库通知使用 pushplus 通知
+
+删除了原先的 sendNotification ，新增 sendTelegramNotification 
+
+更新 handleCheckin
+
+2025.4.10更新，解决 bot 未知账号: 失败 - statusData.data.leftDays.split is not a function
 
 更换tg变量名,原变量已更换：
 
@@ -12,11 +20,6 @@ TELEGRAM_BOT_TOKEN
 
 TELEGRAM_CHAT_ID
 ```
-👇👇👇
-# 基于 [仓库](https://github.com/hailang3014/glados-auto) 进行的修改，原仓库通知使用 pushplus 通知
-
-删除了原先的 sendNotification ，新增 sendTelegramNotification 
-更新 handleCheckin
 
 ## 功能
 全自动签到，无需服务器，Web 页面，多账号签到任务，签到结果通过 Telegram 推送，每日自动签到，确保不断签，支持手动签到任务
