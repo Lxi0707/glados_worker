@@ -1,4 +1,4 @@
-# 📄 glados_worker_sign_in  （请前往tesk文件夹）
+# 📄 glados_worker_sign_in  
 建立在 Cloudflare worker 的 glados 自动签到，成功将发送通知到 Telegram
 
 [glados 注册地址](https://glados.rocks) 
