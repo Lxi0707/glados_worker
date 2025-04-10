@@ -3,6 +3,12 @@
 
 [glados 注册地址](https://glados.rocks) 
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Lxi0707/glados_worker/blob/main/glados.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/Lxi0707/glados_worker/blob/main/glados.jpg">
+  <img alt="自定义图片" src="https://github.com/Lxi0707/glados_worker/blob/main/glados.jpg">
+</picture>
+
 
 👇👇👇
 # 基于 [仓库](https://github.com/hailang3014/glados-auto) 进行的修改，原仓库通知使用 pushplus 通知
