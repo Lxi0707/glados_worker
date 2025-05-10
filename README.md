@@ -17,7 +17,7 @@
 
 更新 handleCheckin
 
-2025.4.10更新，解决 bot 未知账号: 失败 - statusData.data.leftDays.split is not a function
+## 2025.4.10更新，解决 bot 未知账号: 失败 - statusData.data.leftDays.split is not a function
 
 更换tg变量名,原变量已更换：
 
